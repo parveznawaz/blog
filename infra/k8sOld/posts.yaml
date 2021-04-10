@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
     - name: posts
-      image: parveznawaz/posts:latest
+      image: parveznawaz/posts:0.0.1

@@ -1,0 +1,57 @@
+kubectl version
+
+docker build -t parveznawaz/posts:0.0.1 .
+docker run parveznawaz/posts  
+docker run -it parveznawaz/posts sh
+docker run -d parveznawaz/posts
+docker exec -it 232323 sh
+docker logs 12321
+docker ps
+
+
+docker build -t parveznawaz/event-bus .
+docker push parveznawaz/event-bus
+
+ kubectl apply -f .\posts.yaml
+ kubectl get pods
+ kubectl delete -f infra/k8s/
+
+Pod commands
+============================================
+ kubectl exec -it [pod_name][cmd]
+ kubectl logs [pod_name]
+ kubectl delete pod [pod_name]
+ kubectl apply -f [config file name]
+ kubectl describe pod [pod_name]
+
+
+Deplyments commands
+============================================
+ kubectl get deployments
+ kubectl describe deployment [deployment_name]
+ kubectl apply -f [config file name]
+ kubectl delete deployment [deployment_name]
+
+ kubectl apply -f .\event-bus-depl.yaml
+ kubectl apply -f .
+
+
+update deployment
+================================================
+kubectl rollout restart deployment posts-depl
+
+
+services
+================================================
+kubectl get services
+kubectl describe service [service_name]
+
+
+nginx
+=================================================
+https://kubernetes.github.io/ingress-nginx/deploy/
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.45.0/deploy/static/provider/cloud/deploy.yaml
+
+
+
+code C:\Windows\System32\drivers\etc\hosts
